@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Icons</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+    <link rel='stylesheet' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.10/angular-material.css'>
+    <link rel='stylesheet' href='https://material.angularjs.org/1.1.10/docs.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body ng-app="MyApp">
+
+
+<div layout="column" layout-padding="" ng-cloak="" ng-controller="DemoCtrl">
+    <form ng-submit="display(query)">
+        <md-content class="md-no-momentum" style="padding-left: 30%;padding-right:30%;padding-top:5%;width: 40%">
+            <md-input-container class="md-icon-float md-block">
+                <label>Query</label>
+                <input ng-model="query" type="text">
+            </md-input-container>
+
+            <md-button class="md-raised  md-primary" type="submit" id="submit" style=" text-align: center;">Search
+            </md-button>
+
+
+        </md-content>
+    </form>
+    <table data-ng-if="response_titles.length > 0"
+           style="padding-left: 30%;padding-right:30%;padding-top:5%;width: 40%">
+
+        <tbody>
+        <tr data-ng-repeat="title in response_titles track by $index" data-ng-bind="title" flex></tr>
+        </tbody>
+    </table>
+
+
+</div>
+
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-messages.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.1.10/angular-material.js'></script>
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
